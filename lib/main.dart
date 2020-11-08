@@ -18,6 +18,33 @@ void main() {
 class DicePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container();
+
+    var leftDiceNumber = 1;
+    var rightDceNumber = 1;
+
+    return Center(
+      child: Row(
+        children: [
+          Expanded(
+            flex: 1, // Ne kadarlık alanı kapladığı
+            child: FlatButton(
+              onPressed: () {
+
+              },
+              child: Image.asset('images/dice$leftDiceNumber.png'),
+            ),
+          ),
+          Expanded(
+            flex: 1,
+            child: FlatButton(
+              onPressed: () {
+
+              },
+              child: Image.asset('images/dice$rightDceNumber.png'),
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }
